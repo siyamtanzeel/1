@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://previews.123rf.com/images/asmati/asmati1602/asmati160202976/52180935-trade-mark-sign-flat-style-icon-on-transparent-background.jpg">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="menubtn"></i>
+    </label>
+    <div class="sidebar">
+      <header>
+        <label for="check">
+        <i class="fas fa-times" id="cancel"></i>
+        </label>
+      </header>
+      
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="fas fa-id-card"> </i> Contact</a></li>
+        <li><a href="#skillco"><i class="fas fa-wrench"> </i> My Skills</a></li>
+      </ul>
+    </div>
+    <div class="showcase">
+      <div class="showcase-bottom">
+          <h2 id="welcomemsg"></h2>
+          <h1>Muhammad Tanzeel</h1>
+          <p>Student and Web-developer</p>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div id="about">
+          <div id="seephoto">
+            <img id="myPhoto" src="webcvr.jpg" alt="">
+          </div>
+          <div class="info">
+            <h1>
+              About me
+            </h1>
+            
+            <h2>Lets Introduce Myself</h2>
+            <p>My full name is <br> Tanzeel Muhammad Siyam. <br> I am a student of class 11 studying in Rajarbag Police Lines College.Though I study with science related subjects,I have interest in Technologies since my early childhood.Currently I am learning Web Development and created this web page to apply my knowledge of Web Development.This web page is a visual representation of my web development skills.</p>
+          </div>
+          </div>
+          <div id="skillco">
+            <div class="webdev">
+              <h1 class="red">Web Development</h1>
+              <i class="fas fa-laptop-code"></i>
+              <p>
+                Web development is the building and maintenance of websites; it's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Web developers, or 'devs', do this by using a variety of coding languages.
+              </p>
+            </div>
+            <div class="editing">
+              <h1>Photo editing</h1>
+              <i class="fas fa-magic"></i>
+              <p>
+                Editing photos in an aesthetic way has become a very important task nowadays.As People upload their photos in social media,they need the photos look great.<br>Besides Coding,I also have the ability to edit your photos in a way that your viewers will love it!
+              </p>
+            </div>
+          </div>
+          <h1 id="sk-h">My skills</h1>
+        <div id="skills">
+          <div class="skills">
+            <div class="html">
+              <h2>HTML </h2>
+            </div>
+            <div class="css">
+              <h2>CSS </h2>              
+            </div>
+            <div class="js">
+              <h2>JavaScript </h2>
+            </div>
+            <div class="python">
+              <h2>Python </h2>
+            </div>
+          </div>
+          <div class="sk-meter">
+            <p class="html-m">95%</p>
+            <p class="css-m">80%</p>
+            <p class="js-m">30%</p>
+            <p class="python-m">15%</p>
+          </div>
+        </div>
+        <div class="work">
+          <h1>What can I do for you?</h1>
+          <i class="fas fa-tools"></i>
+          <p>Well,as a learner I have too many things in front of me to learn.This is the first website I have created and I aim to develop more in the future.If you think these skills are enough to make a static website for you,you can hire me to work for you</p>
+        </div>
+    </section>
+    <footer>
+      <div id="contact">
+        <table>
+          <tr>
+            <th>Phone: </th>
+            <td>+8801880074363</td>
+          </tr>
+          <tr>
+            <th>E-mail: </th>
+            <td>sttanzilas@gmail.com </td>
+          </tr>
+          <tr>
+            <th><a href="https://www.facebook.com/siyamtanzeel"><i class="fab fa-facebook"></i></a> / </th>
+            <td><a href="https://www.facebook.com/siyamtanzeel">siyamtanzeel</a></td>
+          </tr>
+          <tr>
+            <th><a href="https://www.instagram.com/siyamtanzeel"><i class="fab fa-instagram"></i></a> / </th>
+            <td><a href="https://www.instagram.com/siyamtanzeel">siyamtanzeel</a></td>
+          </tr>
+         </table>
+      </div>
+    </footer>
+  </div>
+  <script>
+    var username = window.prompt("Whats your name buddy?");
+    if (username == null){
+      document.getElementById("welcomemsg").innerHTML="Welcome to my website! I'm";
+    }
+    else {
+      document.getElementById("welcomemsg").innerHTML="Welcome to my website "+username+"! I'm";
+    }
+    
+
+
+  </script>
+</body>
+</html>
