@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 :root{
-    --primary-green:linear-gradient(to top left,rgb(0, 225, 255) ,rgba(0, 255, 179, 0.89));
+    --primary-green:#292b2c;
 }
 select{
     outline: none;
@@ -26,8 +27,7 @@ body{
     overflow-x: hidden;
     text-align: center;
     color: rgb(134, 134, 134);
-    background: #ebfdfa;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
 }
 i{
@@ -70,140 +70,13 @@ i{
     font-size: 1rem;
     color: white;
 }
-.container{
-    display:block;
-    position:relative;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.navbar{
+    z-index:3;
+}
+.navbar-brand{
+    font-family: 'Chango',cursive;
 }
 
-/*sidebar*/
-.sidebar{
-    color: white;
-    background: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-    font-family: "Roboto";
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-    z-index: 3;
-    left:-100vw;
-    width:100vw;
-    height: 70%;
-    align-self: center;
-    animation-name: sidebar-opening;
-    animation-duration: 2s;
-}
-@keyframes sidebar-opening{
-    0%{opacity: 0;}
-    50%{
-        opacity: 0;
-    }
-    100%{opacity: 1;}
-}
-.sidebar header{
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right:1rem;
-    margin-top: 0.1rem;
-}
-.sidebar ul{
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.sidebar li{
-    line-height: 1.5rem;
-}
-.sidebar i{
-    text-align: left;
-    justify-self: left;
-    color: rgb(0, 0, 0);
-}
-.sidebar a{
-    z-index: 2;
-    display: block;
-    width:100%;
-    height: 100%;
-    color: rgb(0, 0, 0);
-    font-weight:400;
-}
-.sidebar a::hover{
-    color: red;   
-}
-#check{
-    display: none;
-}
-label #menubtn,label #cancel{
-    color: white;
-    z-index: 3;
-    font-size: 1.2rem;
-    background: rgba(0, 0, 0, 0.507);
-    padding: 0.25rem;
-    border-radius: 5px;
-}
-label #menubtn{
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-}
-label #cancel{
-    z-index: 3;
-    position:absolute;
-    background:none;
-    color: rgb(0, 0, 0);
-    left: 90%;
-}
-#check:checked~ label #menubtn{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-#check:checked~.sidebar{
-    left: 0;
-    transition-duration: 0.4s;
-    box-shadow: #0000009a 0px 1px 19px;
-    align-items:center;
-    transform:none;
-    box-shadow: #0000009a 0px 1px 19px;
-}
-
-.sidebar-lg{
-    display: none;
-}
-
-.showcase-top{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 13vh;
-    justify-content: space-between;
-    color: white;
-    background:linear-gradient(to top left,rgb(90, 90, 90),#292929);
-    display: flex;
-    flex-direction:row;
-    text-align: center;
-}
-.fa-facebook{
-    position: relative;
-    z-index: 2;
-    color: rgb(49, 172, 255);
-}
-.fa-instagram{
-    position: relative;
-    z-index: 2;
-    color: rgb(255, 0, 128);
-}
 
 .showcase-bottom{
     display: flex;
@@ -231,7 +104,7 @@ label #cancel{
     z-index: 1;
     animation-name:openingafter ;
     animation-duration: 2s;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 .showcase-bottom h2{
     color: rgb(255, 189, 113);
@@ -254,6 +127,12 @@ label #cancel{
     color:white;
     font-family: 'Audiowide','Cursive';
     font-size: 2rem;
+}
+.showcase-bottom button{
+    z-index: 2;
+}
+.showcase-bottom a{
+    z-index: 2;
 }
 #about{
     align-items: center;
@@ -286,7 +165,7 @@ label #cancel{
     z-index: 1;
     border-radius: 1rem;
     position: absolute;
-    top: 5rem;
+    top: 6rem;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -313,38 +192,8 @@ label #cancel{
 
 #about p{
     white-space: normal;
-    box-shadow: rgb(117, 117, 117) 0px 1px 6px,rgb(97, 97, 97) 0px 4px 18px;
     border-radius: 10px;
     padding: 1rem;
-}
-
-#skillco{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#skillco div{
-    background: var(--primary-green);
-    padding: 2rem 0.4rem;
-    border-radius: 2rem;
-    color: rgba(0, 0, 0, 0.74);
-    box-shadow: rgb(100, 100, 100) 0px 1px 18px inset;
-    margin: 1.5rem auto;
-    max-width: 350px;
-    max-height: 370px;
-}
-.webdev{
-    display: block;
-    align-self: center;
-    text-align: center;
-    justify-self: center;
-    
-}
-.webdev i{
-    font-size: 6rem;
-    color: rgb(0, 152, 163);
-    margin: 1rem auto;
-    text-align: center;
 }
 #skills{
     display:grid;
@@ -435,19 +284,6 @@ label #cancel{
     box-shadow: rgba(0, 204, 0, 0.459) 0px 2px 6px,rgba(0, 204, 0, 0.603) 0px 2px 18px;
     width: 15%;
 }
-.editing{
-    margin: 3rem auto;
-    max-width: 450px;
-}
-.editing h1{
-    color: red;
-}
-.editing i{
-    font-size: 6rem;
-    color: rgb(0, 152, 163);
-    margin: 1rem auto;
-    text-align: center;
-}
 
 .work{
     white-space:pre-wrap;
@@ -491,15 +327,25 @@ footer table{
 }
 footer th{
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 0.2rem 0.5rem;
 }
 footer td{
-    color: rgb(51, 51, 51);
+    color: rgb(180, 180, 180);
     text-align:left;
 }
 footer a{
-    color:rgb(70, 70, 70);
+    color:rgb(180, 180, 180);
+}
+.fa-facebook{
+    position: relative;
+    z-index: 2;
+    color: rgb(49, 172, 255);
+}
+.fa-instagram{
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 0, 128);
 }
 /* Desktop*/
 @media only screen and (min-width:790px){
@@ -553,9 +399,6 @@ footer a{
     .sidebar a:hover{
         opacity: 0.6;
         transition-duration: 0.4s;
-    }
-    #skillco div{
-        max-width: 350px;
     }
     
 }
