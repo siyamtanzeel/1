@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Siyamtanzeel</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="TMS.png" type="image/x-icon">
+</head>
+<body class="bg-gray-200 overflow-x-hidden">
+    <nav class="fixed shadow-xl z-20 top-0 left-0 w-full h-12 bg-gray-100 flex flex-row align-middle justify-between">
+        <div class="justify-around align-middle">
+            <h1 class="text-xl text-gray-800 my-2 mx-4">TMS</h1>
+        </div>
+        <div class="block mx-6 md:hidden lg:hidden">
+            <i id="menubtn" class=" flex flex-col my-2 w-6 h-1 mx-1 my-4">
+                <div id="line-1" class="transition ease-in-out duration-300 bg-gray-600 my-0.5 h-0.5"><br></div>
+                <div id="line-2" class="transition ease-in-out duration-300 bg-gray-600 my-0.5 h-0.5"><br></div>
+                <div id="line-3" class="transition ease-in-out duration-300 bg-gray-600 my-0.5 h-0.5"><br></div>
+            </i>
+        </div>
+        <div id="menu" class="absolute left-full transition ease-in-out duration-300 flex flex-col justify-center top-12 right-0 w-screen h-90 lg:flex lg:flex-row lg:relative lg:w-full lg:justify-between lg:top-0  lg:left-0 md:flex-row md:relative md:left-0 md:top-0 md:w-auto mx-2">
+            <ul class="flex font-semibold flex-col items-center text-left space-y-4 lg:align-middle lg:flex-row space-x-5 lg:space-x-10 md:flex-row md:space-y-0 mx-6 my-3">
+                <br>
+                <li class="text-center w-full relative">
+                    <a href="index.html" id="mode-toggle" class="flex text-center block text-gray-500 hover:opacity-70 transition ease-in-out duration-300">
+                        <i class="fas fa-moon"></i>
+                        <div id="togbtn" class="relative bg-indigo-500 w-7 h-4 mx-3 rounded-full flex justify-end">
+                            <div class="absolute w-4 h-4 rounded-full bg-white shadow-md" id="togbtncircle"></div>
+                        </div>
+                        <i class="fas fa-sun text-yellow-400"></i>
+                    </a>
+                </li>
+                <li class="text-left w-full relative"><a href="" class=" block text-gray-500 hover:opacity-70 transition ease-in-out duration-300 text-blue-500 lg:px-2 lg:py-1 lg:rounded">Home</a></li>
+                <li class="text-left w-full relative"><a href="#about" class=" block text-gray-500 hover:opacity-70 transition ease-in-out duration-300">About</a></li>
+                <li class="text-left w-full relative"><a href="#services" class=" block text-gray-500 hover:opacity-70 transition ease-in-out duration-300">Services</a></li>
+                <li class="text-left w-full relative"><a href="" class=" block text-gray-500 hover:opacity-70 transition ease-in-out duration-300">Portfolio</a></li>    
+            </ul>
+            <a class="text-white self-center my-2 font-semibold text-sm align-middle p-2 mx-2 bg-red-700 transform hover:scale-110 transition ease-in-out duration-300 rounded-lg" href="#contact">Contact Me</a>
+        </div>
+    </nav>
+    <main>
+        <header class="pt-10 py-10 bg-cover">
+            <!--Showcase-->
+            <div class="flex flex-col items-center py-5">
+                <h2 class="text-yellow-500 text-2xl font-thin text-center">Welcome to my site ! I'm</h2>
+                <h1 class="text-white font-bold text-5xl text-center my-6">Muhammad Tanzeel</h1>
+                <p class="text-gray-400">Web Developer and Photo Editor</p>
+                <!--Social links-->
+                <div class="mt-3 flex flex-row items-center justify-center space-x-4">
+                    <a href="https://www.facebook.com/siyamtanzeel"><i class="fab fa-facebook text-lg text-blue-500"></i></a>
+                    <a href="https://www.instagram.com/siyamtanzeel"><img src="1200px-Instagram.svg.png" alt="" class="w-5"></a>
+                    <a href="https://www.linkedin.com/mwlite/in/muhammad-tanzeel-8a3875209"><i class="fab fa-linkedin text-lg text-blue-500"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <section class="w-screen grid grid-cols-1 lg:overflow-x-hidden md:grid-cols-12 lg:grid-cols-12 items-center align-middle">
+            <h2 class="my-10 md:col-span-12 lg:col-span-4 text-center text-gray-900 text-2xl">About Me</h2>
+            <div class="lg:col-span-8 md:col-span-12 shadow-md mx-5 mb-10 flex flex-col md:flex-row md:mt-5 lg:flex-row items-center bg-white rounded-lg lg:mx-24 lg:my-10" id="about">
+                <img class="rounded-full m-10" src="webcvr.webp" alt="" width="230">
+                <div class="bg-blue-500 p-5 lg:p-10 rounded-b-lg md:rounded-r-lg md:rounded-b-none lg:rounded-r-lg lg:rounded-b-none">
+                    <p class="relative w-full text-gray-300 whitespace-pre-line">
+                        A web designer/developer focused on crafting great web experiences. Designing and Coding have been my passion since the days I started working with computers but I found myself into web design/development since 2020. I enjoy creating beautifully designed, intuitive and functional websites.Alongside Web design,I also edit photos in a way that viewers love to see.
+                        </p>
+                        <h1 class="relative w-full mx-auto mt-5 text-white font-semibold">Tanzeel Muhammad Siyam</h1>
+                        <p class="relative w-full mx-auto text-gray-900">Web Developer and Photo Editor</p>
+                </div>
+        </section>
+        <section class=" p-6" id="skills">
+            <h2 class="relative w-full text-center mt-5 text-white text-2xl">My Skills</h2>
+            <div class="relative flex flex-row mx-auto my-10 p-3 rounded-lg bg-white bg-opacity-20 text-left items-center align-baseline w-full lg:w-8/12 backdrop-filter backdrop-blur-md">
+                <!--<h2 class="text-white text-lg">Photo Editing</h2> -->
+                 <div class="relative flex flex-col space-y-12 my-4 w-full">
+                     <div id="html" class="mx-5">
+                        <i class="fab fa-html5 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-yellow-700">
+                             <h2 class="inline font-semibold">HTML</h2>
+                        </i>
+                        <div class="mt-1 bg-gray-500 w-full h-1 rounded-full">
+                            <div class="relative w-11/12 rounded-full bg-gradient-to-r from-red-600 to-yellow-700 h-1">
+                            </div>
+                        </div>
+                     </div>
+                     <div id="css" class="mx-5">
+                        
+                        <i class="fab fa-css3-alt text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400">
+                                <h2 class="inline font-semibold">CSS</h2>
+                        </i>
+
+                        <div class="mt-1 bg-gray-500 w-full h-1 rounded-full">
+                             <div class="relative w-10/12 rounded-full bg-gradient-to-r from-blue-700 to-blue-400 h-1">
+                             </div>
+                        </div>
+                     </div>
+
+                     <div id="js" class="mx-5">
+
+                        <i class="fab fa-css3-alt text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 to-yellow-400">
+                             <h2 class="inline font-semibold">JavaScript</h2>
+                        </i>
+
+                        <div class="mt-1 bg-gray-500 w-full h-1 rounded-full">
+                             <div class="relative  w-3/12 rounded-full bg-gradient-to-r from-yellow-600 to-yellow-400 h-1">
+                             </div>
+                        </div>
+
+                     </div>
+
+                     <div id="python" class="mx-5">
+
+                        <i class="fab fa-python text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-yellow-400">
+                              <h2 class="inline font-semibold">Python</h2>
+                        </i>
+
+                        <div class="relative mt-1 bg-gray-500 w-full h-1 rounded-full">
+                             <div class="relative w-1/12 rounded-full bg-gradient-to-r from-blue-500 to-yellow-400 h-1">
+                             </div>
+                        </div>
+                     </div>
+
+                     <div id="Photoshop" class="mx-5">
+
+                        <i class="fas fa-camera-retro text-transparent bg-clip-text bg-gradient-to-br from-red-600 to-indigo-700">
+                           <h2 class="inline font-semibold">Photoshop</h2>
+                        </i> 
+                         <div class="relative mt-1 bg-gray-500 w-full h-1 rounded-full">
+                             <div class="relative  w-7/12 bg-gradient-to-r from-red-600 to-indigo-700 h-1 rounded-full">
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+        <h2 class="my-10 md:col-span-12 lg:col-span-4 text-center text-gray-900 text-2xl">Services</h2>
+        <section class="flex flex-col lg:flex-row my-20 space-y-20 lg:space-y-0" id="services">
+            <div id="webdev" class=" relative md:w-8/12 lg:w-full lg:mx-10 self-center">
+                <div class="relative z-10 bg-white w-10/12 shadow-md rounded-md flex flex-col justify-center mx-auto text-center p-5">
+                    <h2 class="text-lg text-blue-500 font-semibold py-5">Web Development</h2>
+                    <i class="fas fa-code text-8xl text-gray-500"></i>
+                    <p class="py-5 text-gray-500">
+                        Web development is the building and maintenance of websites; it's the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Web developers, or 'devs', do this by using a variety of coding languages.                    
+                    </p>
+                </div>
+            </div>
+            <div id="photoedit" class="relative md:w-8/12 lg:w-full lg:mx-10 self-center">
+                <div class="relative z-10 bg-white w-10/12 shadow-md rounded-md flex flex-col justify-center mx-auto text-center p-5">
+                    <h2 class="text-lg text-blue-500 font-semibold py-5">Photo Editing</h2>
+                    <i class="fas fa-cut text-8xl text-gray-500"></i>
+                    <p class="py-5 text-gray-500">
+                        Editing photos in an aesthetic way has become a very important task nowadays.As People upload their photos in social media,they need the photos look great.Besides Coding,I also have the ability to edit your photos in a way that your viewers will love it!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" bg-black pt-10" id="contact">
+        <h2 class="text-white text-xl text-center font-semibold">Keep in Touch</h2>
+        <div id="nonsocial" class="relative flex flex-col w-full justify-center">
+            <ul class="flex flex-row my-5 justify-center space-x-4">
+
+                <li class="">
+                    <a href="https://www.facebook.com/siyamtanzeel"><i class="fab fa-facebook text-lg text-blue-500 bg-white rounded-full"></i></a>
+                </li>
+                    
+                <li class="">
+                    <a href="https://www.instagram.com/siyamtanzeel"><i class="fab fa-instagram-square text-lg text-pink-600"></i></a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/muhammad-tanzeel-8a3875209/"><i class="fab fa-linkedin-in text-lg text-blue-500"></i></a>
+                </li>
+            </ul>
+            <ul class="m-5 md:w-6/12 lg:w-3/12 self-center">
+                <li class="text-blue-500 grid grid-cols-12">
+                    <h3 class="col-span-4 font-semibold"><i class="text-lg fas fa-map-marker-alt"></i> Address:</h3>
+                    <p class="cols-span-8 text-gray-400">Kamalapur,Dhaka,Bangladesh</p>
+                </li>
+                <li class="text-blue-500 grid grid-cols-12">
+                    <h3 class="col-span-4 font-semibold"><i class=" text-lg fas fa-phone-alt"></i> Phone:</h3>
+                    <p class="cols-span-8 text-gray-400">+8801880074363</p>
+                </li>
+                <li class="text-blue-500 grid grid-cols-12">
+                    <h3 class="col-span-4 font-semibold"><i class=" text-lg fas fa-envelope"></i> E-mail:</h3>
+                    <p class="cols-span-8 text-gray-400">sttanzilas@gmail.com</p>
+                </li>
+
+            </ul>
+        </div>
+        <p class="mt-4 text-gray-400 px-8 text-center bg-gray-800">©2021 | Tanzeel Muhammad Siyam | All rights reserved</p>
+    </footer>
+    <!--
+    <div class="grid lg:grid-cols-4 md\:grid-cols-1">
+        <div class="m-5 p-5 rounded-xl flex flex-col align-top justify-items-center text-gray-100 bg-gradient-to-r from-red-600 to-red-900">
+            <h1 class="text-3xl py-3">Hello There</h1>
+            <p class="text-pg text-gray-400"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore delectus, assumenda officiis labore quaerat corporis. Illum velit placeat tempore numquam nostrum distinctio sit eligendi suscipit blanditiis similique. Expedita, recusandae.</p>
+            <button class="btn text-show px-2 w-28 py-1 bg-blue-700 rounded my-2 self-center ">Show more</button>
+        </div>
+        <div class="m-5 p-5 rounded-xl flex flex-col align-top justify-items-center text-gray-100 bg-gradient-to-r from-green-700 to-green-900">
+            <h1 class="text-3xl py-3">Hello There</h1>
+            <p class="text-pg text-gray-400"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore delectus, assumenda officiis labore quaerat corporis. Illum velit placeat tempore numquam nostrum distinctio sit eligendi suscipit blanditiis similique. Expedita, recusandae.</p>
+            <button class="btn text-show px-2 w-28 py-1 bg-blue-700 rounded my-2 self-center">Show more</button>
+        </div>
+        <div class="m-5 p-5 rounded-xl flex flex-col align-top justify-items-center text-gray-100 bg-gradient-to-r from-indigo-600 to-indigo-800">
+            <h1 class="text-3xl py-3 ">Hello There</h1>
+            <p class="text-pg text-gray-400"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore delectus, assumenda officiis labore quaerat corporis. Illum velit placeat tempore numquam nostrum distinctio sit eligendi suscipit blanditiis similique. Expedita, recusandae.</p>
+            <button class="btn text-show px-2 w-28 py-1 bg-blue-700 rounded my-2 self-center">Show more</button>
+        </div>
+    
+    </div>   -->  
+    <script src="light.js"></script>
+</body>
+</html>
