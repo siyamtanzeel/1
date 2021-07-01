@@ -22,6 +22,12 @@
             flex-direction: column;
             gap: 0.3rem;
         }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            font-style: normal;
+            font-stretch: normal;
+        }
         h1{
             font-weight: 600;
             background:linear-gradient(to left,rgb(255, 0, 170),rgb(0, 217, 255));
@@ -59,6 +65,14 @@
             transition: ease-in-out;
             transition-delay: 50ms;
             transition-duration: 300ms;
+        }
+        #refresh{
+            color: whitesmoke;
+            background:linear-gradient(to bottom,rgb(182, 0, 85),rgb(194, 0, 136));
+            border-radius: 0.4rem;
+            padding:1rem 2rem;
+            font-size:1rem;
+            font-weight: 600;
         }
         .result{
             display: flex;
@@ -125,10 +139,11 @@
         <input type="text" id="you" placeholder="Your Name">
         <input type="text" id="lover" placeholder="Lover's Name">
         <input type="submit" id="submit" value="Check">
+        <a href="loveCalc.html" id="refresh" class="hidden" >Check Again <i class="fas fa-refresh"></i></a>
     </div>
     <div class="result">
         <p id="resultp" class="hidden">
-            Congratulations! <span id="ryou"></span> loves <span id="rlover"></span> <span id="rperc">40%</span>
+            <span class="rlover"></span> loves <span class="ryou"></span> <span id="rperc1">40%</span> <br> and <br> <span class="ryou"></span> loves <span class="rlover"></span> <span id="rperc2"></span>
         </p>
     </div>
     <footer class="flex flex-col">
@@ -138,22 +153,27 @@
         const you = document.querySelector("#you");
         const lover = document.querySelector("#lover");
         const submit = document.querySelector("#submit");
+        const refresh = document.querySelector("#refresh");
         const resultp = document.querySelector("#resultp");
-        const ryou = document.querySelector("#ryou");
-        const rlover = document.querySelector("#rlover");
-        const rperc = document.querySelector("#rperc");
+        const ryou = document.querySelectorAll(".ryou");
+        const rlover = document.querySelectorAll(".rlover");
+        const rperc1 = document.querySelector("#rperc1");
+        const rperc2 = document.querySelector("#rperc2");
         submit.addEventListener("click",function(){
-            if(you.value=='' && lover.value==''){
+            if(you.value=='' || lover.value==''){
                 alert("Please enter both names")
             }
             else{
                 resultp.classList.remove("hidden");
                 resultp.classList.add("transition");
                 resultp.classList.add("fadein");
-
-                ryou.innerHTML = lover.value;
-                rlover.innerHTML = you.value;
-                rperc.innerHTML = Math.ceil(Math.random()*101) + "%";
+                refresh.classList.remove("hidden")
+                ryou[0].innerHTML = lover.value;
+                ryou[1].innerHTML = lover.value;
+                rlover[0].innerHTML = you.value;
+                rlover[1].innerHTML = you.value;
+                rperc1.innerHTML = Math.floor(Math.random()*101) + "%";
+                rperc2.innerHTML = Math.floor(Math.random()*101) + "%";
                 submit.classList.add("hidden");
             }
         },false);
